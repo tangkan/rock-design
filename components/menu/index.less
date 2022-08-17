@@ -1,0 +1,54 @@
+@import "../style/index.less";
+
+.ant-menu-root {
+  background-color: @bg-page;
+  padding: 16px 12px;
+}
+
+.ant-menu-item,
+.ant-menu-submenu {
+  margin-bottom: 4px;
+  border-radius: 5px;
+  transition: background 0.1s !important;
+}
+
+.ant-menu-submenu-title {
+  border-radius: 5px;
+}
+
+.ant-menu-sub {
+  background-color: @bg-page !important;
+}
+
+.ant-menu-inline .ant-menu-item:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.ant-menu-light {
+  .ant-menu-submenu-title:hover,
+  .ant-menu-item-only-child:hover {
+    background-color: @bg-component-1-hover;
+    color: @text-color;
+  }
+}
+
+.ant-menu .ant-menu-item-selected {
+  color: @primary-color !important;
+  background-color: @bg-page !important;
+}
+
+.ant-menu-submenu-selected .ant-menu-submenu-arrow {
+  color: @primary-color;
+}
+
+.ant-menu-submenu:hover > .ant-menu-submenu-title > .ant-menu-submenu-arrow {
+  color: @text-color;
+}
+
+.ant-menu-inline .ant-menu-item::after {
+  display: none;
+}
+
+.ant-menu-title-content {
+  font-size: 16px;
+}
