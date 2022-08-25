@@ -5,3 +5,4 @@ export { default as Breadcrumb } from './breadcrumb';
 export { default as Button } from './button';
 export { default as Menu } from './menu';
 export { default as Pagination } from './pagination';
+export { default as Tabs } from './Tabs';
