@@ -1,50 +1,37 @@
 @import '../style/index.less';
 
 .ant-checkbox-wrapper{
-  .ant-checkbox-input:focus + .ant-checkbox-inner {
-    border-color: @border-component;
-  }
+  font-family: @primary-font-family;
+  // .ant-checkbox-input:focus + .ant-checkbox-inner {
+  //   border-color: @border-component;
+  // }
   .ant-checkbox .ant-checkbox-inner{
     border-color: @border-component;
   }
-  .ant-checkbox.ant-checkbox-indeterminate .ant-checkbox-inner{
-    border-color: @primary-color;
-  }
-  &:hover .ant-checkbox .ant-checkbox-inner{
-      border-color: @radio-checkbox-hover-color;
-  }
-  &:hover .ant-checkbox.ant-checkbox-indeterminate .ant-checkbox-inner{
-      border-color: @primary-color;
-  }
-}
 
-.ant-checkbox-wrapper.ant-checkbox-wrapper-checked{
   .ant-checkbox.ant-checkbox-checked .ant-checkbox-inner{
     border-color: @primary-color;
+    background-color: @primary-color;
   }
-  &:hover .ant-checkbox.ant-checkbox-checked .ant-checkbox-inner{
-    border-color: @primary-color;
-  }
-}
 
-.ant-checkbox-wrapper {
-  font-family: @primary-font-family;
-  .ant-checkbox-indeterminate .ant-checkbox-inner {
-      background-color: @primary-color;
-      border-color: @primary-color;
-      &::after {
-        height: 2px;
-        background-color: @bg-container-1;
-      }
+  .ant-checkbox.ant-checkbox-indeterminate .ant-checkbox-inner{
+    border-color: @primary-color;
+    background-color: @primary-color;
+    &::after {
+      height: 2px;
+      background-color: @bg-container-1;
+    }
   }
-  .ant-checkbox.ant-checkbox-disabled .ant-checkbox-inner {
+
+  .ant-checkbox.ant-checkbox-disabled .ant-checkbox-inner,
+  .ant-checkbox.ant-checkbox-disabled.ant-checkbox-checked .ant-checkbox-inner {
     background-color: @bg-page;
     border-color: @border-component !important;
     &::after {
       border-color: @text-color-placeholder;
     }
   }
-
+  
   .ant-checkbox.ant-checkbox-disabled.ant-checkbox-indeterminate .ant-checkbox-inner {
     background-color: @bg-page;
     border-color: @border-component !important;
@@ -52,5 +39,25 @@
       background-color: @text-color-placeholder;
       border-color: @text-color-placeholder;
     }
+  }
+
+  &:hover .ant-checkbox .ant-checkbox-inner{
+      border-color: @radio-checkbox-hover-color;
+  }
+
+  &:hover .ant-checkbox.ant-checkbox-indeterminate .ant-checkbox-inner{
+      border-color: @primary-color;
+  }
+}
+
+
+
+// 选中
+.ant-checkbox-wrapper.ant-checkbox-wrapper-checked{
+  .ant-checkbox-checked::after{
+    border-color: @primary-color;
+  }
+  &:hover .ant-checkbox.ant-checkbox-checked .ant-checkbox-inner{
+    border-color: @primary-color;
   }
 }
