@@ -12,6 +12,8 @@ dist
 dist-ssr
 package-lock.json
 *.local
+/lib
+/es
 
 # Editor directories and files
 .vscode/*

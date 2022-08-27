@@ -1,10 +1,12 @@
 // rollup.config.js
+// import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import NpmImport from 'less-plugin-npm-import';
 import babel from 'rollup-plugin-babel';
 import json from 'rollup-plugin-json';
 import postcss from 'rollup-plugin-postcss';
+// import dts from 'rollup-plugin-dts'
 // import { terser } from 'rollup-plugin-terser'
 import jsx from 'acorn-jsx';
 
@@ -27,7 +29,7 @@ export default {
     format: 'esm',
   },
   plugins: [
-    // resolve(),
+    // resolve(['js', 'ts', 'tsx']),
     json(),
     commonjs(),
     babel(babelOptions),

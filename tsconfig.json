@@ -5,6 +5,8 @@
       "antd": ["components/index.tsx"],
       "antd/es/*": ["components/*"]
     },
+    "declaration": true, // 生成d.ts文件
+    "declarationDir": "./d",
     "strictNullChecks": true,
     "module": "esnext",
     "moduleResolution": "node",
