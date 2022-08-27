@@ -1,0 +1,102 @@
+@import '../style/index.less';
+
+.ant-tabs {
+  border-radius: 10px;
+  padding: 0 24px;
+  .ant-tabs-tab-active .ant-tabs-tab-btn {
+    font-weight: 600;
+    // border-bottom: 3px sol;
+  }
+  .ant-tabs-tab-btn {
+    color: @text-color-3;
+    &:hover {
+      color: @primary-color;
+    }
+    &:active {
+      color: @primary-color-active;
+    }
+  }
+  .ant-tabs-tab + .ant-tabs-tab {
+    margin-left: 48px;
+  }
+}
+
+// bar样式
+.ant-tabs-top > .ant-tabs-nav .ant-tabs-ink-bar {
+  border-radius: 4px;
+  height: 3px;
+}
+
+// bar left
+.ant-tabs-left > .ant-tabs-nav .ant-tabs-ink-bar {
+  width: 3px;
+  border-radius: 4px;
+}
+.ant-tabs-right > .ant-tabs-nav .ant-tabs-ink-bar {
+  width: 3px;
+  border-radius: 4px;
+}
+
+// card 样式
+.ant-tabs-card {
+  padding: 0;
+}
+
+.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab {
+  border-radius: 10px 10px 0 0;
+  border: none;
+  padding: 12px 24px;
+  box-sizing: border-box;
+}
+
+.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-nav-add {
+  border-radius: 10px 10px 0 0;
+  border: none;
+  color: @text-color-3;
+  margin-left: 4px;
+  &:hover {
+    color: @primary-color;
+  }
+}
+
+.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab {
+  margin-left: 4px;
+}
+
+.ant-tabs-tab-with-remove {
+  padding-right: 16px !important;
+}
+
+.ant-tabs-tab-remove {
+  padding: 0;
+  margin-left: 16px;
+  border: none;
+}
+
+.ant-tabs-tab-with-remove {
+  button:focus {
+    outline: none !important;
+  }
+}
+
+.ant-tabs-tab-active .ant-tabs-tab-remove {
+  color: @primary-color;
+}
+
+// left
+.ant-tabs-left {
+  background-color: #fff;
+  padding: 24px;
+}
+.ant-tabs-left > .ant-tabs-nav .ant-tabs-tab {
+  padding: 13px 44px 13px 16px;
+}
+
+// right
+.ant-tabs-right {
+  background-color: #fff;
+  padding: 24px;
+}
+.ant-tabs-right > .ant-tabs-nav .ant-tabs-tab {
+  padding: 13px 16px 13px 44x;
+}

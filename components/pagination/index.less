@@ -1,67 +1,69 @@
 @import '../style/index.less';
 
-.ant-pagination-prev .ant-pagination-item-link,
-.ant-pagination-next .ant-pagination-item-link {
-  background-color: @bg-page;
-  border: none;
-  border-radius: 5px;
-}
-
-.ant-pagination-options {
-  .ant-pagination-options-size-changer {
-    .ant-select-selector {
-      background-color: @bg-page;
-      border: none;
-      border-radius: 5px;
-    }
-    .ant-select-selection-item {
-      padding-top: 1px;
-      color: @text-color;
-    }
+.ant-pagination {
+  .ant-pagination-prev .ant-pagination-item-link,
+  .ant-pagination-next .ant-pagination-item-link {
+    background-color: @bg-page;
+    border: none;
+    border-radius: 5px;
   }
-  .ant-pagination-options-quick-jumper {
-    color: @text-color-3;
-    input {
+
+  .ant-pagination-options {
+    .ant-pagination-options-size-changer {
+      .ant-select-selector {
+        background-color: @bg-page;
+        border: none;
+        border-radius: 5px;
+      }
+      .ant-select-selection-item {
+        padding-top: 1px;
+        color: @text-color;
+      }
+    }
+    .ant-pagination-options-quick-jumper {
       color: @text-color-3;
-      background-color: @bg-page;
-      border: none;
-      border-radius: 5px;
+      input {
+        color: @text-color-3;
+        background-color: @bg-page;
+        border: none;
+        border-radius: 5px;
+      }
     }
   }
-}
 
-.anticon-left,
-.anticon-right {
-  color: @text-color-decoration;
-}
-
-.ant-pagination-item {
-  background-color: @bg-page;
-  border: none;
-  border-radius: 5px;
-  &:hover {
-    background-color: @theme-lightcolor;
+  .anticon-left,
+  .anticon-right {
+    color: @text-color-decoration;
   }
-  a {
-    padding: 1px 6px;
-    color: @text-color-3;
-    transition: none;
-  }
-}
 
-.ant-pagination-item-active {
-  background-color: @primary-color;
-  &:hover {
+  .ant-pagination-item {
+    background-color: @bg-page;
+    border: none;
+    border-radius: 5px;
+    &:hover {
+      background-color: @theme-lightcolor;
+    }
+    a {
+      padding: 1px 6px;
+      color: @text-color-3;
+      transition: none;
+    }
+  }
+
+  .ant-pagination-item-active {
     background-color: @primary-color;
+    &:hover {
+      background-color: @primary-color;
+      a {
+        color: #fff;
+      }
+    }
     a {
       color: #fff;
     }
   }
-  a {
-    color: #fff;
-  }
-}
 
-.ant-pagination-total-text {
-  color: @text-color-3;
+  .ant-pagination-total-text {
+    color: @text-color-3;
+  }
 }
