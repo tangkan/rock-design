@@ -1,4 +1,3 @@
-import { UserOutlined } from '@ant-design/icons/lib';
 import Dropdown, {
   DropdownButtonProps,
   DropdownButtonType,
@@ -15,14 +14,7 @@ function RKDropdown({ children, ...props }: DropdownProps) {
   );
 }
 RKDropdown.Button = ({ children, ...props }: DropdownButtonProps) => (
-  <Dropdown.Button
-    {...props}
-    overlay={props.overlay}
-    placement={props.placement || 'bottomLeft'}
-    icon={props.icon || <UserOutlined />}
-  >
-    {children}
-  </Dropdown.Button>
+  <Dropdown.Button {...props}>{children}</Dropdown.Button>
 );
 
 export default RKDropdown;

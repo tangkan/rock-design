@@ -2,18 +2,6 @@
 
 .ant-dropdown-trigger{
     font-family: @primary-font-family;
-    color: @primary-color;
-    font-weight: 600;
-    cursor: pointer;
-    &:hover{
-        font-weight: 600;
-        color: @primary-color-active;
-    }
-    &[disabled]{
-        color: #B3D1FF;
-        font-weight: 600;
-        cursor: not-allowed;
-    }
 }
 
 .ant-dropdown {
@@ -71,9 +59,16 @@
 .ant-dropdown-menu-submenu,.ant-dropdown-menu-submenu-popup{
     margin: 0px 8px;
     height: 40px;
+    &.ant-dropdown-menu-submenu-disabled{
+        .ant-dropdown-menu-title-content{
+            color: @text-color-placeholder !important;
+        }
+    }
     .ant-dropdown-menu-submenu-title{
         height: 40px;
         padding: 9px 16px;
+        display: flex;
+        align-items: center;
         .ant-dropdown-menu-title-content{
             font-family: @primary-font-family;
             color: @text-color;
@@ -82,6 +77,11 @@
     }
     &.ant-dropdown-menu-submenu-selected{
         .ant-dropdown-menu-submenu-title{
+            background-color: @theme-lightcolor;
+            border-radius: 5px;
+            &:hover{
+                background-color: @theme-lightcolor;
+            }
             .ant-dropdown-menu-title-content{
                 color: @primary-color;
                 font-weight: 600;
@@ -100,8 +100,7 @@
     }
 }
 
-
-
+// 按钮的圆角弧度
 .ant-btn-group.ant-dropdown-button > .ant-btn:first-child:not(:last-child), 
 .ant-btn-group.ant-dropdown-button > span:first-child:not(:last-child) > .ant-btn{
     border-top-left-radius: 5px;
@@ -112,8 +111,4 @@
 .ant-btn-group.ant-dropdown-button > span:last-child:not(:first-child) > .ant-btn{
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-}
-
-.ant-dropdown-button{
-
 }
