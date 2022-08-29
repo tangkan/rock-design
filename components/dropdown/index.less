@@ -72,10 +72,21 @@
         .ant-dropdown-menu-title-content{
             font-family: @primary-font-family;
             color: @text-color;
-            margin-right: 20px;
+            margin-right: 46px;
         }
     }
-    &.ant-dropdown-menu-submenu-selected{
+    .ant-dropdown-menu-submenu-title:hover{
+        border-radius: 5px;
+        background-color: @bg-page;
+    }
+    &.ant-dropdown-menu-submenu-open.ant-dropdown-menu-submenu-active{
+        .ant-dropdown-menu-submenu-title{
+            border-radius: 5px;
+            background-color: @bg-page;
+        }
+    }
+    &.ant-dropdown-menu-submenu-selected,
+    &.ant-dropdown-menu-submenu-selected.ant-dropdown-menu-submenu-open.ant-dropdown-menu-submenu-active{
         .ant-dropdown-menu-submenu-title{
             background-color: @theme-lightcolor;
             border-radius: 5px;
@@ -85,7 +96,7 @@
             .ant-dropdown-menu-title-content{
                 color: @primary-color;
                 font-weight: 600;
-                margin-right: 20px;
+                margin-right: 46px;
             }
             .ant-dropdown-menu-submenu-expand-icon{
                 svg{
@@ -93,10 +104,6 @@
                 }
             }
         }
-    }
-    .ant-dropdown-menu-submenu-title:hover{
-        border-radius: 5px;
-        background-color: @bg-page;
     }
 }
 
