@@ -9,6 +9,7 @@ import postcss from 'rollup-plugin-postcss';
 // import dts from 'rollup-plugin-dts'
 // import { terser } from 'rollup-plugin-terser'
 import jsx from 'acorn-jsx';
+import pkg from './package.json';
 
 // 环境变量
 const BABEL_ENV = process.env.BABEL_ENV;
@@ -25,7 +26,7 @@ export default {
   input: 'components/index.tsx',
   acornInjectPlugins: [jsx()],
   output: {
-    file: 'lib/index.js',
+    file: pkg.main,
     format: 'esm',
   },
   plugins: [

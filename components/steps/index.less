@@ -1,0 +1,81 @@
+@import '../style/index.less';
+
+.ant-steps {
+  .ant-steps-item-container {
+    // display: flex;
+    // align-items: center;
+    .ant-steps-item-title {
+      color: @text-color-1;
+      font-size: 14px;
+      // line-height: 24px;
+      &::after {
+        // top: 20px;
+        background: none;
+        border-bottom: 1px dashed @bg-component-1-active;
+      }
+    }
+    .ant-steps-item-description,
+    .ant-steps-item-subtitle {
+      font-size: 12px;
+    }
+    .ant-steps-item-icon {
+      margin-right: 16px;
+    }
+  }
+
+  .ant-steps-item-finish
+    > .ant-steps-item-container
+    > .ant-steps-item-content
+    > .ant-steps-item-description {
+    color: @text-color-3;
+  }
+
+  .ant-steps-item-finish
+    > .ant-steps-item-container
+    > .ant-steps-item-content
+    > .ant-steps-item-title::after {
+    background: none;
+  }
+}
+
+// dot
+.ant-steps-dot {
+  .ant-steps-item-container {
+    display: block;
+  }
+  .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-tail::after,
+  .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-tail::after,
+  .ant-steps-item-error > .ant-steps-item-container > .ant-steps-item-tail::after,
+  .ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-tail::after {
+    background: none;
+    border-bottom: 1px dashed @bg-component-1-active;
+  }
+  .ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
+    margin-top: 1px;
+    background: none;
+    border: 2px solid @primary-color;
+  }
+  .ant-steps-item-process .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
+    margin-top: 1px;
+    border: 2px solid @primary-color;
+  }
+  .ant-steps-item-wait .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
+    margin-top: 1px;
+    background: none;
+    border: 2px solid @text-color-placeholder;
+  }
+  .ant-steps-item-error .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
+    margin-top: 1px;
+    border: 2px solid #fa3c58;
+  }
+  .ant-steps-dot .ant-steps-item-process .ant-steps-item-icon {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+// vertical
+.ant-steps-vertical > .ant-steps-item > .ant-steps-item-container > .ant-steps-item-tail::after {
+  background: none;
+  border-left: 1px dashed @bg-component-1-active;
+}
