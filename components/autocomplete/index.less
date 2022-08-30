@@ -1,0 +1,49 @@
+@import '../style/index.less';
+.ant-select-auto-complete:not(.ant-select-customize-input) .ant-select-selector{
+    border: 1px solid @border-component;
+    border-radius: 5px;
+    .ant-select-selection-placeholder{
+        font-family:@primary-font-family;
+        font-size: 14px;
+        color: @text-color-placeholder;
+    }
+   
+}
+.ant-select-auto-complete:not(.ant-select-disabled):hover .ant-select-selector{
+    border-color: @primary-color;
+}
+
+.ant-select-auto-complete.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector{
+    border-color: @primary-color;
+}
+.ant-select-dropdown{
+    border-radius: 5px;
+    box-shadow: 0px 16px 58px -12px rgba(79, 90, 112, 0.12);
+    .rc-virtual-list-holder-inner{
+        .ant-select-item-option-active{
+            background-color: @theme-lightcolor;
+        }
+
+    }
+}
+
+.ant-select-auto-complete.ant-select-customize-input.ant-select-show-search{
+    .ant-input,.ant-btn{
+        height: 32px;
+        border-color: @border-component;
+        &:hover{
+            border-color: @primary-color;
+        }
+    }
+    .ant-input{
+        border-radius: 5px 0 0 5px;
+        &::placeholder{
+            font-family:@primary-font-family;
+            font-size: 14px;
+            color: @text-color-placeholder;
+        }
+    }
+    .ant-input-group > .ant-input-group-addon .ant-input-search-button{
+        border-radius: 0 5px 5px 0;
+    }
+}
