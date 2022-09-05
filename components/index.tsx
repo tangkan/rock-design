@@ -4,6 +4,7 @@ import './style/index.less';
 export { default as AutoComplete } from './autocomplete';
 export { default as Breadcrumb } from './breadcrumb';
 export { default as Button } from './button';
+export { default as Cascader } from './cascader';
 export { default as Checkbox } from './checkbox';
 export { default as Dropdown } from './dropdown';
 export { default as Icons } from './icons';
