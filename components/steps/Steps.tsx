@@ -15,8 +15,6 @@ interface StepsType extends React.FC<StepsProps> {
 }
 
 const RKSteps: StepsType = ({ children, ...props }) => {
-  console.log('steps: ', props);
-
   return <Steps {...props}>{children}</Steps>;
 };
 

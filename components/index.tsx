@@ -14,3 +14,4 @@ export { default as Steps } from './steps';
 export { default as Switch } from './switch';
 export { default as Tabs } from './tabs';
 export { default as Tag } from './tag';
+export { default as Tree } from './tree';
