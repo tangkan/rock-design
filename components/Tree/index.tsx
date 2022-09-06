@@ -1,4 +1,4 @@
-import Tree, { TreeProps } from './Tree';
+import Tree, { DataNode, TreeProps } from './Tree';
 
-export { TreeProps };
+export { TreeProps, DataNode };
 export default Tree;

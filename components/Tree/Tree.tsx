@@ -1,4 +1,4 @@
-import Tree, { TreeProps } from 'antd/lib/tree';
+import Tree, { DataNode, TreeProps } from 'antd/lib/tree';
 import * as React from 'react';
 import icons from '../icons';
 import './index.less';
@@ -19,6 +19,6 @@ const RKTree: TreeType = ({ children, ...props }) => {
 
 RKTree.DirectoryTree = Tree.DirectoryTree;
 
-export { TreeProps };
+export { TreeProps, DataNode };
 
 export default RKTree;
