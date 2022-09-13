@@ -1,14 +1,14 @@
-@import '../style/index.less';
+@import '../style/style.less';
 
 .ant-tree {
   .ant-tree-treenode {
     width: 100%;
     padding: 8px 16px;
+    border: none !important;
     border-radius: 5px;
     &:hover {
       background-color: @bg-page;
     }
-    border: none !important;
   }
   .ant-tree-node-content-wrapper {
     width: 100%;
@@ -27,7 +27,8 @@
   }
   .ant-tree-treenode-selected {
     background-color: @theme-lightcolor !important;
-    .ant-tree-switcher-icon, .ant-tree-switcher-noop {
+    .ant-tree-switcher-icon,
+    .ant-tree-switcher-noop {
       color: @primary-color !important;
     }
   }

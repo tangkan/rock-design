@@ -21,7 +21,6 @@ const RKSteps: StepsType = ({ children, ...props }) => {
 RKSteps.Step = (props) => {
   console.log('step: ', props);
   const { status, progressDot } = props;
-  // const { icon = <FinishWithBorderTowDone /> } = props;
   let icon;
   switch (status) {
     case 'finish':

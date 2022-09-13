@@ -9,6 +9,7 @@ import postcss from 'rollup-plugin-postcss';
 // import dts from 'rollup-plugin-dts'
 // import { terser } from 'rollup-plugin-terser'
 import jsx from 'acorn-jsx';
+import cssnano from 'cssnano';
 import pkg from './package.json';
 
 // 环境变量
@@ -38,6 +39,7 @@ export default {
     postcss({
       extract: true,
       extensions: ['.css', '.less'],
+      plugins: [cssnano()],
       use: [
         [
           'less',
