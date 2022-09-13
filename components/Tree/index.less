@@ -1,0 +1,55 @@
+@import '../style/style.less';
+
+.ant-tree {
+  .ant-tree-treenode {
+    width: 100%;
+    padding: 8px 16px;
+    border: none !important;
+    border-radius: 5px;
+    &:hover {
+      background-color: @bg-page;
+    }
+  }
+  .ant-tree-node-content-wrapper {
+    width: 100%;
+    text-align: left;
+    background-color: inherit;
+    transition: background 0s;
+    &:hover,
+    &:active {
+      background-color: inherit;
+    }
+  }
+  .ant-tree-node-content-wrapper.ant-tree-node-selected {
+    color: @primary-color;
+    font-weight: 600;
+    background-color: inherit;
+  }
+  .ant-tree-treenode-selected {
+    background-color: @theme-lightcolor !important;
+    .ant-tree-switcher-icon,
+    .ant-tree-switcher-noop {
+      color: @primary-color !important;
+    }
+  }
+}
+
+.ant-tree-switcher {
+  margin-right: 16px;
+  color: @text-color-placeholder;
+  background-color: inherit !important;
+}
+
+.ant-tree-show-line .ant-tree-indent-unit::before {
+  top: -9px;
+  right: 22px;
+  height: 42px;
+}
+
+.ant-tree-indent-unit {
+  width: 32px;
+}
+
+.ant-tree-switcher-leaf-line::before {
+  height: 40px;
+}

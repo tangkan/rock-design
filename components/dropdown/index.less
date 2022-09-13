@@ -1,121 +1,122 @@
-@import '../style/index.less';
+@import '../style/style.less';
 
-.ant-dropdown-trigger{
-    font-family: @primary-font-family;
+.ant-dropdown-trigger {
+  font-family: @primary-font-family;
 }
 
 .ant-dropdown {
-    .ant-dropdown-menu{
-        padding: 8px 0px;
-        border-radius: 10px;
-        box-shadow: 0px -2px 6px -4px rgba(79, 90, 112, 0.1),0px 6px 20px -3px rgba(79, 90, 112, 0.1);
-    }
+  .ant-dropdown-menu {
+    padding: 8px 0px;
+    border-radius: 10px;
+    box-shadow: 0px -2px 6px -4px rgba(79, 90, 112, 0.1), 0px 6px 20px -3px rgba(79, 90, 112, 0.1);
+  }
 }
 
-.ant-dropdown-menu-submenu-popup{
-    .ant-dropdown-menu{
-        padding: 8px 0px;
-        margin-left: 10px;
-        margin-top: -4px;
-        border-radius: 10px;
-        box-shadow: 0px -2px 6px -4px rgba(79, 90, 112, 0.1),0px 6px 20px -3px rgba(79, 90, 112, 0.1);
-    }
+.ant-dropdown-menu-submenu-popup {
+  .ant-dropdown-menu {
+    margin-top: -4px;
+    margin-left: 10px;
+    padding: 8px 0px;
+    border-radius: 10px;
+    box-shadow: 0px -2px 6px -4px rgba(79, 90, 112, 0.1), 0px 6px 20px -3px rgba(79, 90, 112, 0.1);
+  }
 }
 
-.ant-dropdown-menu-item{
-    margin: 0px 8px;
+.ant-dropdown-menu-item {
+  height: 40px;
+  margin: 0px 8px;
+  padding: 9px 16px;
+  font-family: @primary-font-family;
+  letter-spacing: 0px;
+  border-radius: 5px;
+  &:hover {
+    background-color: @bg-page;
+  }
+  .ant-dropdown-menu-title-content {
+    color: @text-color;
     font-family: @primary-font-family;
-    height: 40px;
-    border-radius: 5px;
-    letter-spacing: 0px;
-    padding: 9px 16px;
-    &:hover{
-        background-color: @bg-page;
+  }
+  &.ant-dropdown-menu-item-disabled {
+    &:hover {
+      background-color: @bg-container-1;
     }
-    .ant-dropdown-menu-title-content{
-        font-family: @primary-font-family;
-        color: @text-color;
+    .ant-dropdown-menu-title-content {
+      color: @text-color-placeholder;
     }
-    &.ant-dropdown-menu-item-disabled{
-        &:hover{
-            background-color: @bg-container-1;
-        }
-        .ant-dropdown-menu-title-content{
-            color: @text-color-placeholder;
-        }
+  }
+  &.ant-dropdown-menu-item-selected {
+    background-color: @theme-lightcolor;
+    &:hover {
+      background-color: @theme-lightcolor;
     }
-    &.ant-dropdown-menu-item-selected{
-        background-color: @theme-lightcolor;
-        &:hover{
-            background-color: @theme-lightcolor;
-        }
-        .ant-dropdown-menu-title-content{
-            color: @primary-color;
-            font-weight: 600;
-        }
+    .ant-dropdown-menu-title-content {
+      color: @primary-color;
+      font-weight: 600;
     }
+  }
 }
 
-.ant-dropdown-menu-submenu,.ant-dropdown-menu-submenu-popup{
-    margin: 0px 8px;
+.ant-dropdown-menu-submenu,
+.ant-dropdown-menu-submenu-popup {
+  height: 40px;
+  margin: 0px 8px;
+  &.ant-dropdown-menu-submenu-disabled {
+    .ant-dropdown-menu-title-content {
+      color: @text-color-placeholder !important;
+    }
+  }
+  .ant-dropdown-menu-submenu-title {
+    display: flex;
+    align-items: center;
     height: 40px;
-    &.ant-dropdown-menu-submenu-disabled{
-        .ant-dropdown-menu-title-content{
-            color: @text-color-placeholder !important;
+    padding: 9px 16px;
+    .ant-dropdown-menu-title-content {
+      margin-right: 46px;
+      color: @text-color;
+      font-family: @primary-font-family;
+    }
+  }
+  .ant-dropdown-menu-submenu-title:hover {
+    background-color: @bg-page;
+    border-radius: 5px;
+  }
+  &.ant-dropdown-menu-submenu-open.ant-dropdown-menu-submenu-active {
+    .ant-dropdown-menu-submenu-title {
+      background-color: @bg-page;
+      border-radius: 5px;
+    }
+  }
+  &.ant-dropdown-menu-submenu-selected,
+  &.ant-dropdown-menu-submenu-selected.ant-dropdown-menu-submenu-open.ant-dropdown-menu-submenu-active {
+    .ant-dropdown-menu-submenu-title {
+      background-color: @theme-lightcolor;
+      border-radius: 5px;
+      &:hover {
+        background-color: @theme-lightcolor;
+      }
+      .ant-dropdown-menu-title-content {
+        margin-right: 46px;
+        color: @primary-color;
+        font-weight: 600;
+      }
+      .ant-dropdown-menu-submenu-expand-icon {
+        svg {
+          fill: @primary-color;
         }
+      }
     }
-    .ant-dropdown-menu-submenu-title{
-        height: 40px;
-        padding: 9px 16px;
-        display: flex;
-        align-items: center;
-        .ant-dropdown-menu-title-content{
-            font-family: @primary-font-family;
-            color: @text-color;
-            margin-right: 46px;
-        }
-    }
-    .ant-dropdown-menu-submenu-title:hover{
-        border-radius: 5px;
-        background-color: @bg-page;
-    }
-    &.ant-dropdown-menu-submenu-open.ant-dropdown-menu-submenu-active{
-        .ant-dropdown-menu-submenu-title{
-            border-radius: 5px;
-            background-color: @bg-page;
-        }
-    }
-    &.ant-dropdown-menu-submenu-selected,
-    &.ant-dropdown-menu-submenu-selected.ant-dropdown-menu-submenu-open.ant-dropdown-menu-submenu-active{
-        .ant-dropdown-menu-submenu-title{
-            background-color: @theme-lightcolor;
-            border-radius: 5px;
-            &:hover{
-                background-color: @theme-lightcolor;
-            }
-            .ant-dropdown-menu-title-content{
-                color: @primary-color;
-                font-weight: 600;
-                margin-right: 46px;
-            }
-            .ant-dropdown-menu-submenu-expand-icon{
-                svg{
-                    fill: @primary-color;
-                }
-            }
-        }
-    }
+  }
 }
 
 // 按钮的圆角弧度
-.ant-btn-group.ant-dropdown-button > .ant-btn:first-child:not(:last-child), 
-.ant-btn-group.ant-dropdown-button > span:first-child:not(:last-child) > .ant-btn{
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+.ant-btn-group.ant-dropdown-button > .ant-btn:first-child:not(:last-child),
+.ant-btn-group.ant-dropdown-button > span:first-child:not(:last-child) > .ant-btn {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
-.ant-btn-group.ant-dropdown-button > .ant-btn:last-child:not(:first-child), 
-.ant-btn-group.ant-dropdown-button > span:last-child:not(:first-child) > .ant-btn{
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+.ant-btn-group.ant-dropdown-button > .ant-btn:last-child:not(:first-child),
+.ant-btn-group.ant-dropdown-button > span:last-child:not(:first-child) > .ant-btn {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }

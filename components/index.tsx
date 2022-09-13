@@ -1,6 +1,5 @@
 // import "antd/dist/antd.css";
 import './style/index.less';
-// export type { ButtonProps } from "./button";
 export { default as AutoComplete } from './autocomplete';
 export { default as Badge } from './badge';
 export { default as Breadcrumb } from './breadcrumb';
@@ -13,7 +12,9 @@ export { default as Input } from './input';
 export { default as Menu } from './menu';
 export { default as Pagination } from './pagination';
 export { default as Radio } from './radio';
+export { default as Rate } from './rate';
 export { default as Steps } from './steps';
 export { default as Switch } from './switch';
 export { default as Tabs } from './tabs';
 export { default as Tag } from './tag';
+export { default as Tree } from './tree';

@@ -15,15 +15,12 @@ interface StepsType extends React.FC<StepsProps> {
 }
 
 const RKSteps: StepsType = ({ children, ...props }) => {
-  console.log('steps: ', props);
-
   return <Steps {...props}>{children}</Steps>;
 };
 
 RKSteps.Step = (props) => {
   console.log('step: ', props);
   const { status, progressDot } = props;
-  // const { icon = <FinishWithBorderTowDone /> } = props;
   let icon;
   switch (status) {
     case 'finish':
