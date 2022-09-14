@@ -2,31 +2,35 @@
 // .ant-scroll-number{
 //     background-color: #FA3C58;
 // }
-.ant-badge-status-dot,.ant-badge-dot{
-    width: 10px;
-    height: 10px;
-    // background-color: #FA3C58;
+.ant-badge-status-dot,
+.ant-badge-dot {
+  width: 10px;
+  height: 10px;
+  // background-color: #FA3C58;
 }
 
-.ant-badge-status-success{
-    background-color: #22C777;
+.ant-badge-status-success {
+  background-color: #22c777;
 }
-.ant-badge-status-error{
-    background-color: @error-color;
+.ant-badge-status-error {
+  background-color: @error-color;
 }
-.ant-badge-status-warning{
-    background-color: @warning-color;
+.ant-badge-status-warning {
+  background-color: @warning-color;
 }
-.ant-badge-status-default{
-    background-color: @text-color-placeholder;
+.ant-badge-status-default {
+  background-color: @text-color-placeholder;
 }
-.ant-badge-status-processing{
-    background-color: @primary-color;
-    &::after{
-        border: none;
-    }
+.ant-badge-status-processing {
+  background-color: @primary-color;
+  &::after {
+    border: none;
+  }
 }
-.ant-ribbon{
+.ant-ribbon-wrapper {
+  display: inline-block;
+  .ant-ribbon {
     top: -8px;
     border-radius: 3px 3px 0px 3px;
+  }
 }
