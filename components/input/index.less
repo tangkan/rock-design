@@ -202,3 +202,21 @@ textarea.ant-input.ant-input-disabled,
 textarea.ant-input.ant-input-disabled.ant-input-borderless {
   border-radius: 10px;
 }
+.ant-input-group-wrapper {
+  .ant-input-wrapper.ant-input-group {
+    .ant-input-group-addon {
+      color: @text-color-1;
+      background-color: @bg-page;
+      border-color: @border-component;
+    }
+
+    .ant-input-group-addon {
+      border-radius: 7px 0px 0px 7px;
+    }
+
+    .ant-input-affix-wrapper + .ant-input-group-addon,
+    .ant-input + .ant-input-group-addon {
+      border-radius: 0px 7px 7px 0px;
+    }
+  }
+}
