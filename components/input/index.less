@@ -1,0 +1,222 @@
+@import '../style/style.less';
+@input-border: #e8eaee;
+@input-font-color: #212533;
+@input-normal-color: #80caff;
+@input-normal-color-hover: rgba(165, 214, 250, 0.5);
+@input-warning-color-hover: rgba(250, 173, 20, 0.2);
+@input-error-color-hover: rgba(255, 77, 79, 0.2);
+
+.ant-input,
+.ant-input-group > .ant-input {
+  padding: 8px 12px;
+  color: @input-font-color;
+  font-family: @primary-font-family;
+  border-color: @input-border;
+  border-radius: 5px;
+}
+.ant-input.ant-input-lg,
+.ant-input-group > .ant-input.ant-input-lg {
+  padding: 15.5px 12px;
+}
+.ant-input.ant-input-sm,
+.ant-input-group > .ant-input.ant-input-sm {
+  padding: 4px 12px;
+}
+.ant-input::placeholder,
+.ant-input-group > .ant-input::placeholder {
+  color: @text-color-placeholder;
+  font-size: 14px;
+  font-family: @primary-font-family;
+}
+.ant-input:not(.ant-input-disabled):hover {
+  border: 1px solid @input-normal-color-hover;
+  box-shadow: 0 0 0 2px @input-normal-color-hover;
+}
+.ant-input:not(.ant-input-disabled):focus {
+  border: 1px solid @input-normal-color;
+  box-shadow: 0 0 0 2px @input-normal-color-hover;
+}
+.ant-input:not(.ant-input-disabled).ant-input-status-warning:not(.ant-input-borderless):hover {
+  border: 1px solid @input-warning-color-hover;
+  box-shadow: 0 0 0 2px @input-warning-color-hover;
+}
+.ant-input:not(.ant-input-disabled).ant-input-status-warning:not(.ant-input-borderless):focus {
+  border: 1px solid @warning-color;
+  box-shadow: 0 0 0 2px @input-warning-color-hover;
+}
+.ant-input:not(.ant-input-disabled).ant-input-status-error:not(.ant-input-borderless):hover {
+  border: 1px solid @input-error-color-hover;
+  box-shadow: 0 0 0 2px @input-error-color-hover;
+}
+.ant-input:not(.ant-input-disabled).ant-input-status-error:not(.ant-input-borderless):focus {
+  border: 1px solid @error-color;
+  box-shadow: 0 0 0 2px @input-error-color-hover;
+}
+.ant-input:not(.ant-input-disabled).ant-input-borderless {
+  background-color: @bg-page;
+  border: 1px solid @bg-page;
+}
+.ant-input:not(.ant-input-disabled).ant-input-borderless:hover {
+  border: 1px solid @input-normal-color-hover;
+  box-shadow: 0 0 0 2px @input-normal-color-hover;
+}
+.ant-input:not(.ant-input-disabled).ant-input-borderless:focus {
+  border: 1px solid @input-normal-color;
+  box-shadow: 0 0 0 2px @input-normal-color-hover;
+}
+.ant-input:not(.ant-input-disabled).ant-input-borderless.ant-input-status-warning:hover {
+  border: 1px solid @input-warning-color-hover;
+  box-shadow: 0 0 0 2px @input-warning-color-hover;
+}
+.ant-input:not(.ant-input-disabled).ant-input-borderless.ant-input-status-warning:focus {
+  border: 1px solid @warning-color;
+  box-shadow: 0 0 0 2px @input-warning-color-hover;
+}
+.ant-input:not(.ant-input-disabled).ant-input-borderless.ant-input-status-error:hover {
+  border: 1px solid @input-error-color-hover;
+  box-shadow: 0 0 0 2px @input-error-color-hover;
+}
+.ant-input:not(.ant-input-disabled).ant-input-borderless.ant-input-status-error:focus {
+  border: 1px solid @error-color;
+  box-shadow: 0 0 0 2px @input-error-color-hover;
+}
+.ant-input-affix-wrapper {
+  padding: 8px 12px;
+  color: @input-font-color;
+  font-family: @primary-font-family;
+  border-color: @input-border;
+  border-radius: 5px;
+}
+.ant-input-affix-wrapper.ant-input-affix-wrapper-sm {
+  padding: 4px 12px;
+}
+.ant-input-affix-wrapper.ant-input-affix-wrapper-lg {
+  padding: 15.5px 12px;
+}
+.ant-input-affix-wrapper > input.ant-input:not(.ant-input-disabled),
+.ant-input-affix-wrapper > input.ant-input:not(.ant-input-disabled):hover,
+.ant-input-affix-wrapper > input.ant-input:not(.ant-input-disabled):focus,
+.ant-input-affix-wrapper
+  > input.ant-input.ant-input-borderless:not(.ant-input-disabled):hover
+  > input.ant-input.ant-input-borderless:not(.ant-input-disabled):focus {
+  border: none;
+  box-shadow: none;
+}
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+  border-color: @input-normal-color-hover;
+  box-shadow: 0 0 0 2px @input-normal-color-hover;
+}
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper-focused {
+  border-color: @input-normal-color;
+}
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper-status-error:hover {
+  border-color: @input-error-color-hover;
+  box-shadow: 0 0 0 2px @input-error-color-hover;
+}
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper-status-error.ant-input-affix-wrapper-focused {
+  border: 1px solid @error-color;
+}
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper-status-warning:hover {
+  border-color: @input-warning-color-hover;
+  box-shadow: 0 0 0 2px @input-warning-color-hover;
+}
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper-status-warning.ant-input-affix-wrapper-focused {
+  border: 1px solid @warning-color;
+}
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper-borderless {
+  background-color: @bg-page;
+  border: 1px solid @bg-page;
+}
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper-borderless:hover {
+  border: 1px solid @input-normal-color-hover;
+  box-shadow: 0 0 0 2px @input-normal-color-hover;
+}
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper-borderless.ant-input-affix-wrapper-focused {
+  border: 1px solid @input-normal-color;
+  box-shadow: 0 0 0 2px @input-normal-color-hover;
+}
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper-borderless.ant-input-affix-wrapper-status-error:hover {
+  border: 1px solid @input-error-color-hover;
+  box-shadow: 0 0 0 2px @input-error-color-hover;
+}
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper-borderless.ant-input-affix-wrapper-status-error.ant-input-affix-wrapper-focused {
+  border: 1px solid @error-color;
+  box-shadow: 0 0 0 2px @input-error-color-hover;
+}
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper-borderless.ant-input-affix-wrapper-status-warning:hover {
+  border: 1px solid @input-warning-color-hover;
+  box-shadow: 0 0 0 2px @input-warning-color-hover;
+}
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper-borderless.ant-input-affix-wrapper-status-warning.ant-input-affix-wrapper-focused {
+  border: 1px solid @warning-color;
+  box-shadow: 0 0 0 2px @input-warning-color-hover;
+}
+.ant-input-textarea {
+  position: relative;
+}
+.ant-input-textarea.ant-input-textarea-show-count::after {
+  position: absolute;
+  right: 10px;
+  bottom: 2px;
+  z-index: 1;
+  color: @text-color-placeholder;
+  font-size: 14p;
+}
+.ant-input-textarea
+  .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless):hover {
+  border-color: none;
+  box-shadow: none;
+}
+.ant-input-textarea
+  .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper-borderless:hover {
+  border-color: none;
+  box-shadow: none;
+}
+.ant-input-textarea .ant-input-affix-wrapper {
+  border-radius: 10px;
+}
+textarea.ant-input {
+  padding: 12px 16px;
+  border-radius: 10px;
+}
+.ant-input-affix-wrapper-textarea-with-clear-btn .ant-input-clear-icon {
+  top: 14px;
+}
+.ant-input.ant-input-disabled,
+.ant-input-affix-wrapper.ant-input-affix-wrapper-disabled {
+  background-color: @bg-page;
+  border-color: @input-border;
+  border-radius: 5px;
+}
+.ant-input.ant-input-disabled:hover,
+.ant-input-affix-wrapper.ant-input-affix-wrapper-disabled:hover {
+  border-color: @input-border;
+}
+.ant-input.ant-input-disabled.ant-input-borderless,
+.ant-input-affix-wrapper.ant-input-affix-wrapper-disabled.ant-input-affix-wrapper-borderless {
+  background-color: @input-border;
+  border: 1px solid @input-border;
+  border-radius: 5px;
+}
+textarea.ant-input.ant-input-disabled,
+textarea.ant-input.ant-input-disabled.ant-input-borderless {
+  border-radius: 10px;
+}
+.ant-input-group-wrapper {
+  .ant-input-wrapper.ant-input-group {
+    .ant-input-group-addon {
+      color: @text-color-1;
+      background-color: @bg-page;
+      border-color: @border-component;
+    }
+
+    .ant-input-group-addon {
+      border-radius: 7px 0px 0px 7px;
+    }
+
+    .ant-input-affix-wrapper + .ant-input-group-addon,
+    .ant-input + .ant-input-group-addon {
+      border-radius: 0px 7px 7px 0px;
+    }
+  }
+}
