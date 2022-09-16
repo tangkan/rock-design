@@ -1,0 +1,104 @@
+@import '../style/style.less';
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border: 1px solid @border-component;
+  border-radius: 5px;
+}
+
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  box-sizing: border-box;
+  height: 40px;
+}
+
+.ant-select-single .ant-select-selector .ant-select-selection-item,
+.ant-select-single .ant-select-selector .ant-select-selection-placeholder {
+  line-height: 36px;
+}
+
+.ant-select-item,
+.ant-select-item-empty {
+  min-height: 40px;
+  line-height: 28px;
+  border-radius: 5px;
+}
+
+.ant-select-item-group {
+  min-height: 30px;
+  line-height: 20px;
+}
+.ant-select-item-option {
+  margin-bottom: 4px;
+}
+
+.ant-select-dropdown .rc-virtual-list-holder-inner .ant-select-item-option-active {
+  background-color: @bg-page;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  color: @primary-color;
+  background-color: @theme-lightcolor !important;
+}
+
+.ant-select-dropdown {
+  padding: 12px;
+  border: 1px solid @border-component;
+  box-shadow: 0px -2px 6px -4px rgba(79, 90, 112, 0.1), 0px 6px 20px -3px rgba(79, 90, 112, 0.1);
+}
+
+// large
+
+.ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector {
+  height: 58px;
+  border-radius: 10px;
+}
+
+.ant-select-single.ant-select-lg:not(.ant-select-customize-input)
+  .ant-select-selector
+  .ant-select-selection-item,
+.ant-select-single.ant-select-lg:not(.ant-select-customize-input)
+  .ant-select-selector
+  .ant-select-selection-placeholder,
+.ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector:after {
+  line-height: 56px;
+}
+
+.ant-select-single.ant-select-lg:not(.ant-select-customize-input):not(.ant-select-customize-input)
+  .ant-select-selection-search-input {
+  height: 56px;
+}
+
+// small
+
+.ant-select-single.ant-select-sm:not(.ant-select-customize-input) .ant-select-selector {
+  height: 32px;
+}
+
+.ant-select-single.ant-select-sm:not(.ant-select-customize-input)
+  .ant-select-selector
+  .ant-select-selection-item,
+.ant-select-single.ant-select-lg:not(.ant-select-customize-input)
+  .ant-select-selector
+  .ant-select-selection-placeholder,
+.ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector:after {
+  line-height: 30px;
+}
+
+.ant-select-single.ant-select-sm:not(.ant-select-customize-input):not(.ant-select-customize-input)
+  .ant-select-selection-search-input {
+  height: 30px;
+}
+
+// boderless
+.ant-select-borderless .ant-select-selector {
+  background-color: @bg-page !important;
+  border-radius: 5px;
+  &:hover {
+    background-color: transparent !important;
+    border: 2px solid @radio-checkbox-hover-color !important;
+  }
+}
+
+.ant-select-open .ant-select-selector {
+  background-color: transparent !important;
+  border: 2px solid #80caff !important;
+}
