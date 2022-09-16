@@ -19,7 +19,6 @@ const RKSteps: StepsType = ({ children, ...props }) => {
 };
 
 RKSteps.Step = (props) => {
-  console.log('step: ', props);
   const { status, progressDot } = props;
   let icon;
   switch (status) {

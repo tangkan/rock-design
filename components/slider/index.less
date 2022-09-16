@@ -1,0 +1,49 @@
+@import '../style/style.less';
+
+.ant-slider-rail {
+  background-color: #f7f7f7;
+}
+
+.ant-slider:hover .ant-slider-rail {
+  background-color: #f7f7f7;
+}
+
+.ant-slider:hover {
+  .ant-slider-track {
+    background-color: @primary-color;
+  }
+  .ant-slider-rail {
+    background-color: @bg-component-1-hover;
+  }
+  .ant-slider-dot-active {
+    border-color: @primary-color;
+  }
+}
+
+.ant-slider-handle {
+  width: 19px;
+  height: 18px;
+  margin-top: -7px;
+  border: 1px solid @bg-component-1-active;
+  border-radius: 5px;
+  &:before {
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    width: 1.5px;
+    height: 8px;
+    background-color: #d6d6d6;
+    content: '';
+  }
+  &:after {
+    top: 4px;
+    left: 10px;
+    width: 1.5px;
+    height: 8px;
+    background-color: #d6d6d6;
+  }
+}
+
+.ant-slider-vertical .ant-slider-handle {
+  margin-left: -8px;
+}

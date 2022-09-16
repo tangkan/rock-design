@@ -15,6 +15,8 @@ export { default as Menu } from './menu';
 export { default as Pagination } from './pagination';
 export { default as Radio } from './radio';
 export { default as Rate } from './rate';
+export { default as Select } from './select';
+export { default as Slider } from './slider';
 export { default as Steps } from './steps';
 export { default as Switch } from './switch';
 export { default as Tabs } from './tabs';
