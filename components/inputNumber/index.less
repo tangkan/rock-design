@@ -31,25 +31,6 @@
   &.ant-input-number-focused {
     border-color: #80caff;
   }
-
-  // borderless
-  &.ant-input-number-borderless {
-    background-color: @bg-page;
-    border: 1px solid @bg-page;
-    .ant-input-number-handler-wrap {
-      background-color: @bg-page;
-    }
-    &:hover {
-      border-color: #d0ebfe;
-      box-shadow: 0 0 0 2px rgb(24 144 255 / 20%);
-    }
-    &:focus,
-    &.ant-input-number-focused {
-      border-color: #80caff;
-      box-shadow: 0 0 0 2px rgb(24 144 255 / 20%);
-    }
-  }
-
   // +,- icon
   .ant-input-number-handler-wrap {
     top: 3px;
@@ -96,6 +77,15 @@
       background: @border-component-hover;
       svg {
         fill: @text-color;
+      }
+    }
+
+    // colick-active
+    .ant-input-number-handler-up:not(.ant-input-number-handler-up-disabled):active,
+    .ant-input-number-handler-down:not(.ant-input-number-handler-down-disabled):active {
+      background-color: @primary-color;
+      svg {
+        fill: @bg-container-1;
       }
     }
   }
@@ -146,6 +136,27 @@
     .ant-input-number-handler-up:not(.ant-input-number-handler-up-disabled):hover,
     .ant-input-number-handler-down:not(.ant-input-number-handler-down-disabled):hover {
       height: 11px !important;
+    }
+  }
+  // borderless
+  &.ant-input-number-borderless {
+    background-color: @bg-page;
+    border: 1px solid @bg-page;
+    .ant-input-number-handler-wrap {
+      background-color: @bg-page;
+      .ant-input-number-handler-up.ant-input-number-handler-up-disabled,
+      .ant-input-number-handler-down.ant-input-number-handler-down-disabled {
+        background-color: @border-component-hover;
+      }
+    }
+    &:hover {
+      border-color: #d0ebfe;
+      box-shadow: 0 0 0 2px rgb(24 144 255 / 20%);
+    }
+    &:focus,
+    &.ant-input-number-focused {
+      border-color: #80caff;
+      box-shadow: 0 0 0 2px rgb(24 144 255 / 20%);
     }
   }
 }
