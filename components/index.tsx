@@ -1,5 +1,4 @@
-import 'antd/dist/antd.less';
-import 'antd/es/style/themes/default.less';
+import './style/index.less';
 
 export { default as AutoComplete } from './autocomplete';
 export { default as Badge } from './badge';
