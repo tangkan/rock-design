@@ -9,6 +9,7 @@ export { default as Checkbox } from './checkbox';
 export { default as Dropdown } from './dropdown';
 export { default as Icons } from './icons';
 export { default as Input } from './input';
+export { default as InputNumber } from './inputNumber';
 export { default as Menu } from './menu';
 export { default as Pagination } from './pagination';
 export { default as Radio } from './radio';
