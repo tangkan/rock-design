@@ -3,6 +3,10 @@
 .ant-select:not(.ant-select-customize-input) .ant-select-selector {
   border: 1px solid @border-component;
   border-radius: 5px;
+  &:hover {
+    border: 1px solid @radio-checkbox-hover-color;
+    box-shadow: 0 0 0 2px @radio-checkbox-hover-color;
+  }
 }
 
 .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
@@ -94,27 +98,27 @@
   border-radius: 5px;
   &:hover {
     background-color: transparent !important;
-    border: 2px solid @radio-checkbox-hover-color !important;
+    box-shadow: 0 0 0 3px @radio-checkbox-hover-color !important;
   }
 }
 
 .ant-select-open .ant-select-selector {
   background-color: transparent;
-  border: 2px solid #80caff;
+  border: 1px solid #80caff;
 }
 
 .ant-select-disabled.ant-select:not(.ant-select-customize-input) .ant-select-selector {
-  background-color: @bg-page;
-  border-color: @border-component;
+  background-color: @bg-page !important;
+  border-color: @border-component !important;
   border-radius: 5px;
   .ant-select-selection-overflow-item {
     opacity: 0.7 !important;
   }
 }
 
-.ant-select-disabled,
-.ant-select-borderless.ant-select:not(.ant-select-customize-input) .ant-select-selector {
-  background-color: @border-component;
+.ant-select-disabled.ant-select-borderless.ant-select:not(.ant-select-customize-input)
+  .ant-select-selector {
+  background-color: @border-component !important;
   border-radius: 5px;
   .ant-select-selection-overflow-item {
     border-color: @theme-lightcolor-hover;
@@ -144,7 +148,7 @@
   }
 }
 
-.ant-select-borderless {
+.ant-select-borderless.ant-select-multiple {
   .ant-select-selection-item {
     background-color: #fff;
   }
@@ -154,4 +158,10 @@
   .ant-select-selection-item {
     background-color: @theme-lightcolor;
   }
+}
+
+.ant-select-borderless.ant-select-focused:not(.ant-select-customize-input) .ant-select-selector {
+  background-color: #fff !important;
+  border: 1px solid #80caff !important;
+  box-shadow: 0 0 0 2px @radio-checkbox-hover-color !important;
 }

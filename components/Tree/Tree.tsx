@@ -7,6 +7,7 @@ const { DownFilled } = icons;
 
 interface TreeType extends React.FC<TreeProps> {
   DirectoryTree: typeof Tree.DirectoryTree;
+  TreeNode: typeof Tree.TreeNode;
 }
 
 const RKTree: TreeType = ({ children, ...props }) => {
@@ -18,6 +19,7 @@ const RKTree: TreeType = ({ children, ...props }) => {
 };
 
 RKTree.DirectoryTree = Tree.DirectoryTree;
+RKTree.TreeNode = Tree.TreeNode;
 
 export { TreeProps, DataNode };
 
