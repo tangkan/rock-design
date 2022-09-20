@@ -61,3 +61,73 @@
     border-color: @primary-color;
   }
 }
+
+// ant-select-tree-checkbox
+.ant-select-tree-checkbox .ant-select-tree-checkbox-inner {
+  border-color: @border-component;
+  border-radius: 3px;
+}
+
+.ant-select-tree-checkbox.ant-select-tree-checkbox-checked .ant-select-tree-checkbox-inner {
+  background-color: @primary-color;
+  border-color: @primary-color;
+}
+
+.ant-select-tree-checkbox.ant-select-tree-checkbox-indeterminate .ant-select-tree-checkbox-inner {
+  background-color: @primary-color;
+  border-color: @primary-color;
+  &::after {
+    height: 2px;
+    background-color: @bg-container-1;
+  }
+}
+
+.ant-select-tree-checkbox.ant-select-tree-checkbox-disabled .ant-select-tree-checkbox-inner,
+.ant-select-tree-checkbox.ant-select-tree-checkbox-disabled.ant-select-tree-checkbox-checked
+  .ant-select-tree-checkbox-inner {
+  background-color: @bg-page;
+  border-color: @border-component !important;
+  &::after {
+    border-color: @text-color-placeholder;
+  }
+}
+
+.ant-select-tree-checkbox.ant-select-tree-checkbox-disabled.ant-select-tree-checkbox-indeterminate
+  .ant-select-tree-checkbox-inner {
+  background-color: @bg-page;
+  border-color: @border-component !important;
+  &::after {
+    background-color: @text-color-placeholder;
+    border-color: @text-color-placeholder;
+  }
+}
+
+.ant-select-tree-checkbox {
+  &:hover {
+    &::after {
+      border: none;
+    }
+    .ant-select-tree-checkbox-inner {
+      border-color: @radio-checkbox-hover-color;
+    }
+  }
+  &.ant-select-tree-checkbox-checked:hover,
+  &.ant-select-tree-checkbox-indeterminate:hover {
+    .ant-select-tree-checkbox-inner {
+      border-color: @primary-color;
+    }
+  }
+}
+
+// ant-select-tree-checkbox选中
+.ant-select-tree-checkbox-wrapper.ant-select-tree-checkbox-wrapper-checked {
+  .ant-select-tree-checkbox-checked::after {
+    border-color: @primary-color;
+    border-radius: 3px;
+  }
+  &:hover
+    .ant-select-tree-checkbox.ant-select-tree-checkbox-checked
+    .ant-select-tree-checkbox-inner {
+    border-color: @primary-color;
+  }
+}

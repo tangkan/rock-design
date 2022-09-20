@@ -22,3 +22,4 @@ export { default as Tabs } from './tabs';
 export { default as Tag } from './tag';
 export { default as Transfer } from './transfer';
 export { default as Tree } from './tree';
+export { default as TreeSelect } from './treeSelect';
