@@ -27,7 +27,7 @@
     "not IE 10"
   ],
   "dependencies": {
-    "antd": "^4.22.2",
+    "antd": "^4.23.0",
     "react": "^18.2.0",
     "typescript": "^4.7.4"
   },
