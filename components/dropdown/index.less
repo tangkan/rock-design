@@ -32,6 +32,14 @@
   &:hover {
     background-color: @bg-page;
   }
+  &.ant-dropdown-menu-item-danger {
+    &:hover {
+      background-color: @bg-page;
+    }
+    .ant-dropdown-menu-title-content {
+      color: @error-color;
+    }
+  }
   .ant-dropdown-menu-title-content {
     color: @text-color;
     font-family: @primary-font-family;
@@ -46,6 +54,13 @@
   }
   &.ant-dropdown-menu-item-selected {
     background-color: @theme-lightcolor;
+    &.ant-dropdown-menu-item-danger,
+    &.ant-dropdown-menu-item-danger:hover {
+      background-color: #ffebec;
+      .ant-dropdown-menu-title-content {
+        color: @error-color;
+      }
+    }
     &:hover {
       background-color: @theme-lightcolor;
     }

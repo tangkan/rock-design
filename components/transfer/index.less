@@ -35,9 +35,34 @@
     .ant-pagination.ant-transfer-list-pagination {
       display: flex;
       align-items: center;
-      padding: 8px 8px 12px;
+      padding: 8px 8px 12px 15px;
       text-align: left;
       border: none;
+    }
+    .ant-pagination {
+      > li,
+      .ant-pagination-item:not(.ant-pagination-item-active),
+      .ant-pagination-prev .ant-pagination-item-link,
+      .ant-pagination-next .ant-pagination-item-link {
+        border-radius: 3px;
+        svg {
+          fill: @text-color-3;
+        }
+      }
+      &.ant-pagination-simple {
+        .ant-pagination-simple-pager {
+          color: @text-color-placeholder;
+          input {
+            margin-right: 4px;
+            color: @text-color;
+            border-radius: 3px;
+          }
+          .ant-pagination-slash {
+            margin: 0 4px 0 5px;
+            color: @text-color-placeholder;
+          }
+        }
+      }
     }
   }
 
