@@ -1,10 +1,5 @@
-import Breadcrumb, {
-  BreadcrumbProps,
-  BreadcrumbItemProps,
-} from "antd/lib/breadcrumb";
-import "./index.less";
-
-// const RKBreadcrumb =
+import Breadcrumb, { BreadcrumbItemProps, BreadcrumbProps } from 'antd/lib/breadcrumb';
+import './index.less';
 
 export { BreadcrumbProps, BreadcrumbItemProps };
 

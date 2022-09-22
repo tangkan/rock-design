@@ -26,10 +26,16 @@ const babelOptions = {
 export default {
   input: 'components/index.tsx',
   acornInjectPlugins: [jsx()],
-  output: {
-    file: pkg.main,
-    format: 'esm',
-  },
+  output: [
+    // {
+    //   file: pkg.module,
+    //   format: 'cjs',
+    // },
+    {
+      file: pkg.main,
+      format: 'esm',
+    },
+  ],
   plugins: [
     // resolve(['js', 'ts', 'tsx']),
     json(),
