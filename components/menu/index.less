@@ -34,11 +34,18 @@
 
 .ant-menu .ant-menu-item-selected {
   color: @primary-color !important;
+  font-weight: 600;
   background-color: @bg-page !important;
 }
 
 .ant-menu-submenu-selected .ant-menu-submenu-arrow {
   color: @primary-color;
+}
+
+.ant-menu-item-selected,
+.ant-menu-submenu-selected .ant-menu-title-content {
+  color: @primary-color;
+  font-weight: 600;
 }
 
 .ant-menu-submenu:hover > .ant-menu-submenu-title > .ant-menu-submenu-arrow {
@@ -51,4 +58,9 @@
 
 .ant-menu-title-content {
   font-size: 16px;
+}
+
+.ant-menu-light .ant-menu-item-only-child:active,
+.ant-menu-light .ant-menu-submenu-title:active {
+  background-color: @border-component-hover;
 }
