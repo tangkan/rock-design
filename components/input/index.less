@@ -2,27 +2,62 @@
 @input-border: #e8eaee;
 @input-font-color: #212533;
 @input-normal-color: #80caff;
-@input-normal-color-hover: rgba(165, 214, 250, 0.5);
-@input-warning-color-hover: rgba(250, 173, 20, 0.2);
-@input-error-color-hover: rgba(255, 77, 79, 0.2);
 
 .ant-input,
 .ant-input-group > .ant-input {
-  padding: 8px 12px;
+  padding: 8px 14px;
   color: @input-font-color;
   font-family: @primary-font-family;
   border-color: @input-border;
   border-radius: 5px;
 }
+// 光标颜色
+.ant-input {
+  caret-color: @input-normal-color;
+  &.ant-input-status-warning {
+    caret-color: @warning-color;
+  }
+  &.ant-input-status-error {
+    caret-color: @error-color;
+  }
+}
+.ant-input-affix-wrapper {
+  .ant-input {
+    caret-color: @input-normal-color;
+  }
+  &.ant-input-affix-wrapper-status-warning {
+    .ant-input {
+      caret-color: @warning-color;
+    }
+  }
+  &.ant-input-affix-wrapper-status-error {
+    .ant-input {
+      caret-color: @error-color;
+    }
+  }
+}
+
 .ant-input.ant-input-lg {
   border-radius: 10px;
+}
+.ant-input.ant-input-lg + .anticon.anticon-close-circle svg {
+  width: 16px;
+  height: 16px;
+}
+.ant-input-affix-wrapper.ant-input-affix-wrapper-lg {
+  .ant-input-clear-icon,
+  .ant-input-clear-icon svg,
+  .anticon.nticon-close-circle svg {
+    width: 16px;
+    height: 16px;
+  }
 }
 // .ant-input-group > .ant-input.ant-input-lg {
 //   border-radius: 0px 5px 5px 0px;
 // }
 .ant-input.ant-input-lg,
 .ant-input-group > .ant-input.ant-input-lg {
-  padding: 15.5px 12px;
+  padding: 17px 16px;
   &::placeholder {
     font-size: 16px;
   }
@@ -43,7 +78,7 @@
 }
 .ant-input:not(.ant-input-disabled):focus {
   border: 1px solid @input-normal-color;
-  box-shadow: 0 0 0 2px @input-normal-color-hover;
+  box-shadow: 0 0 0 3px @input-normal-color-hover;
 }
 .ant-input:not(.ant-input-disabled).ant-input-status-warning:not(.ant-input-borderless):hover {
   border: 1px solid @input-warning-color-hover;
@@ -51,7 +86,7 @@
 }
 .ant-input:not(.ant-input-disabled).ant-input-status-warning:not(.ant-input-borderless):focus {
   border: 1px solid @warning-color;
-  box-shadow: 0 0 0 2px @input-warning-color-hover;
+  box-shadow: 0 0 0 3px @input-warning-color-hover;
 }
 .ant-input:not(.ant-input-disabled).ant-input-status-error:not(.ant-input-borderless):hover {
   border: 1px solid @input-error-color-hover;
@@ -59,42 +94,56 @@
 }
 .ant-input:not(.ant-input-disabled).ant-input-status-error:not(.ant-input-borderless):focus {
   border: 1px solid @error-color;
-  box-shadow: 0 0 0 2px @input-error-color-hover;
+  box-shadow: 0 0 0 3px @input-error-color-hover;
 }
 .ant-input:not(.ant-input-disabled).ant-input-borderless {
   background-color: @bg-page;
   border: 1px solid @bg-page;
 }
 .ant-input:not(.ant-input-disabled).ant-input-borderless:hover {
+  background-color: @bg-container-1;
   border: 1px solid @input-normal-color-hover;
   box-shadow: 0 0 0 2px @input-normal-color-hover;
 }
 .ant-input:not(.ant-input-disabled).ant-input-borderless:focus {
+  background-color: @bg-container-1;
   border: 1px solid @input-normal-color;
-  box-shadow: 0 0 0 2px @input-normal-color-hover;
+  box-shadow: 0 0 0 3px @input-normal-color-hover;
 }
 .ant-input:not(.ant-input-disabled).ant-input-borderless.ant-input-status-warning:hover {
+  background-color: @bg-container-1;
   border: 1px solid @input-warning-color-hover;
   box-shadow: 0 0 0 2px @input-warning-color-hover;
 }
 .ant-input:not(.ant-input-disabled).ant-input-borderless.ant-input-status-warning:focus {
+  background-color: @bg-container-1;
   border: 1px solid @warning-color;
-  box-shadow: 0 0 0 2px @input-warning-color-hover;
+  box-shadow: 0 0 0 3px @input-warning-color-hover;
 }
 .ant-input:not(.ant-input-disabled).ant-input-borderless.ant-input-status-error:hover {
+  background-color: @bg-container-1;
   border: 1px solid @input-error-color-hover;
   box-shadow: 0 0 0 2px @input-error-color-hover;
 }
 .ant-input:not(.ant-input-disabled).ant-input-borderless.ant-input-status-error:focus {
+  background-color: @bg-container-1;
   border: 1px solid @error-color;
-  box-shadow: 0 0 0 2px @input-error-color-hover;
+  box-shadow: 0 0 0 3px @input-error-color-hover;
 }
 .ant-input-affix-wrapper {
-  padding: 8px 12px;
+  padding: 8px 14px;
   color: @input-font-color;
   font-family: @primary-font-family;
   border-color: @input-border;
   border-radius: 5px;
+  .ant-input-password-icon {
+    svg {
+      fill: @text-color-placeholder;
+      &:hover {
+        fill: @text-color-decoration;
+      }
+    }
+  }
   .ant-input {
     border-radius: 0px;
   }
@@ -109,7 +158,7 @@
   padding: 4px 12px;
 }
 .ant-input-affix-wrapper.ant-input-affix-wrapper-lg {
-  padding: 15.5px 12px;
+  padding: 17px 16px;
   border-radius: 10px;
   &::placeholder {
     font-size: 16px;
@@ -130,6 +179,7 @@
 }
 .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper-focused {
   border-color: @input-normal-color;
+  box-shadow: 0 0 0 3px @input-normal-color-hover;
 }
 .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper-status-error:hover {
   border-color: @input-error-color-hover;
@@ -137,6 +187,7 @@
 }
 .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper-status-error.ant-input-affix-wrapper-focused {
   border: 1px solid @error-color;
+  box-shadow: 0 0 0 3px @input-error-color-hover;
 }
 .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper-status-warning:hover {
   border-color: @input-warning-color-hover;
@@ -144,34 +195,53 @@
 }
 .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper-status-warning.ant-input-affix-wrapper-focused {
   border: 1px solid @warning-color;
+  box-shadow: 0 0 0 3px @input-warning-color-hover;
 }
 .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper-borderless {
   background-color: @bg-page;
   border: 1px solid @bg-page;
 }
 .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper-borderless:hover {
+  background-color: @bg-container-1;
   border: 1px solid @input-normal-color-hover;
   box-shadow: 0 0 0 2px @input-normal-color-hover;
+  .ant-input,
+  .ant-input:hover {
+    background-color: @bg-container-1;
+  }
 }
 .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper-borderless.ant-input-affix-wrapper-focused {
+  background-color: @bg-container-1;
   border: 1px solid @input-normal-color;
-  box-shadow: 0 0 0 2px @input-normal-color-hover;
+  box-shadow: 0 0 0 3px @input-normal-color-hover;
 }
 .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper-borderless.ant-input-affix-wrapper-status-error:hover {
+  background-color: @bg-container-1;
   border: 1px solid @input-error-color-hover;
   box-shadow: 0 0 0 2px @input-error-color-hover;
+  .ant-input,
+  .ant-input:hover {
+    background-color: @bg-container-1;
+  }
 }
 .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper-borderless.ant-input-affix-wrapper-status-error.ant-input-affix-wrapper-focused {
+  background-color: @bg-container-1;
   border: 1px solid @error-color;
-  box-shadow: 0 0 0 2px @input-error-color-hover;
+  box-shadow: 0 0 0 3px @input-error-color-hover;
 }
 .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper-borderless.ant-input-affix-wrapper-status-warning:hover {
+  background-color: @bg-container-1;
   border: 1px solid @input-warning-color-hover;
   box-shadow: 0 0 0 2px @input-warning-color-hover;
+  .ant-input,
+  .ant-input:hover {
+    background-color: @bg-container-1;
+  }
 }
 .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper-borderless.ant-input-affix-wrapper-status-warning.ant-input-affix-wrapper-focused {
+  background-color: @bg-container-1;
   border: 1px solid @warning-color;
-  box-shadow: 0 0 0 2px @input-warning-color-hover;
+  box-shadow: 0 0 0 3px @input-warning-color-hover;
 }
 .ant-input-textarea {
   position: relative;
@@ -230,13 +300,17 @@ textarea.ant-input {
       border-color: @border-component;
     }
 
-    .ant-input-group-addon {
+    > :first-child,
+    .ant-input-number-group-addon {
       border-radius: 5px 0px 0px 5px;
     }
-
-    .ant-input-affix-wrapper + .ant-input-group-addon,
-    .ant-input + .ant-input-group-addon {
+    > :last-child {
       border-radius: 0px 5px 5px 0px;
     }
+
+    // .ant-input-affix-wrapper + .ant-input-group-addon,
+    // .ant-input + .ant-input-group-addon {
+    //   border-radius: 0px 5px 5px 0px;
+    // }
   }
 }

@@ -44,10 +44,17 @@
 
   &:hover .ant-checkbox .ant-checkbox-inner {
     border-color: @radio-checkbox-hover-color;
+    box-shadow: 0 0 0 1px @radio-checkbox-hover-color;
+  }
+
+  &:hover .ant-checkbox.ant-checkbox-checked .ant-checkbox-inner,
+  &:hover .ant-checkbox.ant-checkbox-disabled .ant-checkbox-inner {
+    box-shadow: none;
   }
 
   &:hover .ant-checkbox.ant-checkbox-indeterminate .ant-checkbox-inner {
     border-color: @primary-color;
+    box-shadow: none;
   }
 }
 
@@ -56,6 +63,11 @@
   .ant-checkbox-checked::after {
     border-color: @primary-color;
     border-radius: 3px;
+  }
+  .ant-checkbox.ant-checkbox-checked {
+    .ant-checkbox-inner::after {
+      border-radius: 0px 0px 2px 0px;
+    }
   }
   &:hover .ant-checkbox.ant-checkbox-checked .ant-checkbox-inner {
     border-color: @primary-color;
@@ -109,6 +121,7 @@
     }
     .ant-select-tree-checkbox-inner {
       border-color: @radio-checkbox-hover-color;
+      box-shadow: 0 0 0 1px @radio-checkbox-hover-color;
     }
   }
   &.ant-select-tree-checkbox-checked:hover,
@@ -116,6 +129,15 @@
     .ant-select-tree-checkbox-inner {
       border-color: @primary-color;
     }
+  }
+}
+
+// 禁用，选中，半选都不需要box-shadow
+.ant-select-tree-checkbox.ant-select-tree-checkbox-disabled:hover,
+.ant-select-tree-checkbox.ant-select-tree-checkbox-checked:hover,
+.ant-select-tree-checkbox.ant-select-tree-checkbox-indeterminate:hover {
+  .ant-select-tree-checkbox-inner {
+    box-shadow: none;
   }
 }
 

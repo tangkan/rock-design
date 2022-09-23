@@ -11,6 +11,7 @@
     }
     &:hover .ant-radio-inner {
       border-color: @radio-checkbox-hover-color;
+      box-shadow: 0 0 0 1px @radio-checkbox-hover-color;
     }
   }
 
@@ -41,6 +42,12 @@
     &::after {
       transform: scale(0.4);
     }
+  }
+}
+.ant-radio.ant-radio-checked:hover,
+.ant-radio.ant-radio-disabled:hover {
+  .ant-radio-inner {
+    box-shadow: none;
   }
 }
 
