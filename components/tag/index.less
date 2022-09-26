@@ -1,44 +1,50 @@
 @import '../style/style.less';
 
 .ant-tag {
+  padding: 0 10px;
   line-height: 24px;
   background-color: @bg-page;
 }
 .ant-tag-close-icon {
-  margin-left: 10px;
+  margin-left: 8px;
 }
 .ant-tag-success {
-  color: #fff;
-  background: @success-color-active;
-  border: 1px solid @text-color-success;
+  color: @text-color-success;
+  background: #e4f7eb;
+  border: 1px solid #d5f2e2;
   .ant-tag-close-icon {
-    color: #fff;
+    color: @text-color-success;
   }
 }
 
 .ant-tag-processing {
-  color: #fff;
-  background: @primary-color;
-  border: 1px solid @primary-color-active;
+  color: @text-color-theme;
+  background: @theme-lightcolor;
+  border: 1px solid @theme-lightcolor-hover;
   .ant-tag-close-icon {
-    color: #fff;
+    color: @text-color-theme;
   }
 }
 
 .ant-tag-error {
-  color: #fff;
-  background: @error-color;
-  border: 1px solid @error-color-active;
+  color: @text-color-error;
+  background: #ffebec;
+  border: 1px solid #ffd9dc;
   .ant-tag-close-icon {
-    color: #fff;
+    color: @text-color-error;
   }
 }
 
 .ant-tag-warning {
-  color: #fff;
-  background: @warning-color;
-  border: 1px solid @warning-color-active;
+  color: #c77f14;
+  background: #faf4e1;
+  border: 1px solid #f7ebc1;
   .ant-tag-close-icon {
-    color: #fff;
+    color: #c77f14;
   }
+}
+
+.anticon-close .ant-tag-close-icon {
+  position: relative;
+  top: -0.5px;
 }

@@ -17,7 +17,7 @@
 }
 
 .ant-menu-sub {
-  background-color: @bg-page !important;
+  background-color: @bg-page;
 }
 
 .ant-menu-inline .ant-menu-item:not(:last-child) {
@@ -33,17 +33,21 @@
 }
 
 .ant-menu .ant-menu-item-selected {
-  color: @primary-color !important;
+  color: @primary-color;
   font-weight: 600;
-  background-color: @bg-page !important;
+  background-color: @bg-page;
 }
 
 .ant-menu-submenu-selected .ant-menu-submenu-arrow {
   color: @primary-color;
 }
 
-.ant-menu-item-selected,
-.ant-menu-submenu-selected .ant-menu-title-content {
+.ant-menu-item-selected .ant-menu-title-content {
+  color: @primary-color;
+  font-weight: 600;
+}
+
+.ant-menu-submenu-selected > div .ant-menu-title-content {
   color: @primary-color;
   font-weight: 600;
 }
@@ -60,7 +64,48 @@
   font-size: 16px;
 }
 
+.ant-menu-inline > .ant-menu-item,
+.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-vertical-left > .ant-menu-item,
+.ant-menu-vertical-left > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-vertical-right > .ant-menu-item,
+.ant-menu-vertical-right > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-vertical > .ant-menu-item,
+.ant-menu-vertical > .ant-menu-submenu > .ant-menu-submenu-title {
+  height: 48px;
+  line-height: 48px;
+}
+
+.ant-menu-inline .ant-menu-item:not(:last-child),
+.ant-menu-vertical .ant-menu-item:not(:last-child),
+.ant-menu-vertical-left .ant-menu-item:not(:last-child),
+.ant-menu-vertical-right .ant-menu-item:not(:last-child) {
+  margin-bottom: 0px;
+}
+
+.ant-menu-submenu-popup {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px -2px 6px -4px rgba(79, 90, 112, 0.1), 0px 6px 20px -3px rgba(79, 90, 112, 0.1);
+}
+
+.ant-menu-light .ant-menu-item-only-child:hover,
+.ant-menu-light .ant-menu-submenu-title:hover {
+  background-color: @bg-page;
+}
+
 .ant-menu-light .ant-menu-item-only-child:active,
 .ant-menu-light .ant-menu-submenu-title:active {
   background-color: @border-component-hover;
+}
+
+.ant-menu-item.ant-menu-item-selected {
+  font-weight: 600;
+  background-color: @theme-lightcolor;
+}
+
+.ant-menu-item-disabled,
+.ant-menu-submenu-disabled {
+  color: @text-color-placeholder !important;
+  background-color: @bg-page !important;
 }
