@@ -19,6 +19,12 @@
       margin-left: 4px;
       line-height: 40px;
       transform: scale(1.2, 1);
+      svg {
+        transform: scale(1, 0.8);
+      }
+    }
+    .ant-transfer-list-header-title {
+      color: @text-color-placeholder;
     }
   }
   .ant-transfer-list-body {
@@ -56,6 +62,14 @@
             margin-right: 4px;
             color: @text-color;
             border-radius: 3px;
+            &:hover {
+              border-color: @input-normal-color-hover;
+              box-shadow: 0 0 0 2px @input-normal-color-hover;
+            }
+            &:focus {
+              border-color: #80caff;
+              box-shadow: 0 0 0 3px @input-normal-color-hover;
+            }
           }
           .ant-pagination-slash {
             margin: 0 4px 0 5px;
@@ -76,6 +90,9 @@
       // .ant-checkbox-wrapper .ant-checkbox .ant-checkbox-inner {
       // border-color: @radio-checkbox-hover-color;
       // }
+    }
+    &.ant-transfer-list-content-item-disabled {
+      color: @text-color-placeholder;
     }
     &.ant-transfer-list-content-item-checked {
       background-color: @bg-container-1;
@@ -99,6 +116,7 @@
         border: 1.5px solid @primary-color-hover;
       }
       svg {
+        transform: scaleX(0.8);
         fill: @bg-container-1;
       }
       &[disabled] {
