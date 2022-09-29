@@ -1,0 +1,69 @@
+@import '../style/style.less';
+
+@carousel-color-bg: rgba(232, 234, 238, 0.2);
+@carousel-color-bg-hover: rgba(232, 234, 238, 0.8);
+.ant-carousel {
+  background-color: @text-color;
+  .slick-dots {
+    margin-bottom: 0px;
+    li {
+      width: 6px;
+      height: 6px;
+      button {
+        width: 100%;
+        height: 100%;
+        background: @carousel-color-bg;
+        border-radius: 50%;
+        &:hover {
+          background: @carousel-color-bg-hover;
+        }
+      }
+      &.slick-active {
+        button {
+          width: 100%;
+          height: 100%;
+          background-color: @bg-container-1;
+          border-radius: 3px;
+          &:hover {
+            background-color: @bg-container-1;
+          }
+        }
+      }
+    }
+    &.slick-dots-bottom {
+      bottom: 16px;
+    }
+    &.slick-dots-top {
+      top: 16px;
+    }
+    &.slick-dots-right {
+      right: 16px;
+    }
+    &.slick-dots-left {
+      left: 16px;
+    }
+  }
+
+  .slick-dots,
+  .slick-dots.slick-dots-top {
+    li {
+      margin: 0 3px;
+      &.slick-active {
+        width: 32px;
+        height: 6px;
+      }
+    }
+  }
+
+  .slick-dots.slick-dots-right,
+  .slick-dots.slick-dots-left {
+    width: 6px;
+    li {
+      margin: 3px 0px;
+      &.slick-active {
+        width: 6px;
+        height: 32px;
+      }
+    }
+  }
+}
